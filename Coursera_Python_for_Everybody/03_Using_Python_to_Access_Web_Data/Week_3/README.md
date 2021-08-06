@@ -140,3 +140,9 @@ There are three ways that you might retrieve this web page and look at the respo
 Preferred: Modify the [socket1.py](https://www.py4e.com/code3/socket1.py?PHPSESSID=43c2e1eb240e0ad8e0c09f7125f07e05) program to retrieve the above URL and print out the headers and data. Make sure to change the code to retrieve the above URL - the values are different for each URL.
 Open the URL in a web browser with a developer console or FireBug and manually examine the headers that are returned.
 Enter the header values in each of the fields below and press "Submit".
+
+Last-Modified: Content-Type:
+ETag: "1d3-54f6609240717"
+Content-Length: 467
+Cache-Control: max-age=0, no-cache, no-store, must-revalidate
+Content-Type: text/plain
