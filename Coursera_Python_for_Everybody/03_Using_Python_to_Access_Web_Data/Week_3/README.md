@@ -141,6 +141,28 @@ Preferred: Modify the [socket1.py](https://www.py4e.com/code3/socket1.py?PHPSESS
 Open the URL in a web browser with a developer console or FireBug and manually examine the headers that are returned.
 Enter the header values in each of the fields below and press "Submit".
 
+### Implementation
+
+```python
+#!/usr/bin/env python3
+import socket
+
+mysock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+mysock.connect(('data.pr4e.org', 80))
+cmd = 'GET http://data.pr4e.org/intro-short.txt HTTP/1.0\r\n\r\n'.encode()
+mysock.send(cmd)
+
+while True:
+    data = mysock.recv(512)
+    if len(data) < 1:
+        break
+    print(data.decode(), end='')
+
+mysock.close()
+```
+
+### Solution
+
 Last-Modified: Content-Type:
 ETag: "1d3-54f6609240717"
 Content-Length: 467
